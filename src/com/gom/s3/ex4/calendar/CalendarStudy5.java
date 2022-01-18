@@ -15,7 +15,7 @@ public class CalendarStudy5 {
 		time += 1000*60*30;
 		
 		ca.setTimeInMillis(time);
-		System.out.println(ca.getTime());
+		System.out.println(ca.getTime()); 
 		
 		ca.roll(Calendar.MINUTE, 70);//다른 곳에 영향 안 미침
 		System.out.println(ca.getTime());
@@ -29,10 +29,13 @@ public class CalendarStudy5 {
 		String r = sd.format(ca.getTime());
 		System.out.println(r);
 		
-		pattern = "YYYY-MM-dd (E)";
+		String ex = "19970505";
+		
+		
+		pattern = "yyyy-MM-dd (E)";
 		sd.applyPattern(pattern);
 		
-		System.out.println();
+		System.out.println(sd.format(ca.getTime()));
 		
 		
 		
